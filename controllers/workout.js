@@ -17,7 +17,7 @@ module.exports.addItem = (req, res) => {
     });
 };
 
-module.exports.getAllItems = (req, res) => {
+module.exports.getAllWorkouts = (req, res) => {
   Workout.find({ userId: req.user.id })
     .then((workouts) => {
       if (workouts.length > 0) {
