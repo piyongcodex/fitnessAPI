@@ -1,0 +1,71 @@
+Objective: ExpressJS API - Fitness Tracker System.
+
+1. What is the main objective of the project?
+	- ExpressJS API - Fitness Tracker with Simple CRUD functionalities.
+
+2. Who are the target users of the application?
+	- Registered Users.
+
+3. What are the core features or functionalities required?
+
+	- Basic CRUD operations for managing inventory items (Create, Read, Update, Delete).
+		- Authenticated user ability to retrieve a list of all workouts.
+		- Authenticated user ability to add a new workout.
+		- Authenticated user to update an existing workout.
+		- Authenticated user to delete an workout.
+
+4. What data will the application need to store and manage?
+
+	- Workout
+        - userId
+		- name
+		- duration
+		- status
+        - dateAdded
+
+	- User information 
+		- email
+		- password
+		- isAdmin
+
+5. Are there any specific technical requirements or constraints?
+
+	- Express.js API.
+	- MongoDB with Mongoose for data storage and management.
+	- RESTful Architecture.
+
+6. What are the security and authentication requirements?
+
+	- Token-based Authentication (JWT).
+	- Brcypt hash
+
+7. What are your routes and controllers?
+
+	Routes:
+
+	User
+
+	POST /users/login - User login route.
+	POST /users/register - User registration route.
+	GET /users/details - User details.
+
+    Inventory Routes:
+
+	GET /workouts/getMyWorkouts - Retrieve a list of workouts by the user.
+	POST /workouts/ - Add a new workout.
+	PATCH /workouts/updateWorkout/:id - Update an existing workout.
+    PATCH /workouts/completeWorkout/:id - Update an existing workout status to completed.
+	DELETE /workouts/deleteWorkout/:id - Delete an existing working by its ID.
+
+Controllers:
+
+	User Controller:
+	loginUser
+	registerUser
+
+    Inventory Controller:
+	addWorkOut
+	getAllWorkouts
+	updateWorkout
+	completeWorkout
+	deleteWorkout
