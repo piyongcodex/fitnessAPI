@@ -2,7 +2,6 @@
   "endpoints": {
     "login": "/login",
     "register": "/register",
-
     "add": "/",
     "getAllWorkouts": "/getMyWorkouts",
     "updateWorkout": "/updateWorkout/:id",
